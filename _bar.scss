@@ -1,0 +1,38 @@
+// Storage-bar-Background
+
+.storage-bar::before {
+  content: "";
+  position: absolute;
+  background-color: $veryDarkBlue;
+  width: 100%;
+  height: 15px;
+  border-radius: 20px;
+  top: -20%;
+}
+
+// Storage-bar-Fill
+.storage-bar::after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to right, $gradient-1, $gradient-2);
+  width: 81.5%;
+  height: 15px;
+  border-radius: 20px;
+  top: -20%;
+  // opacity: 0;
+}
+
+//    Storage-bar-White-dot
+
+#storage-bar::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 2;
+  top: -20%;
+  right: 21%;
+  // right: 91%;
+}

@@ -1,0 +1,133 @@
+@import "animation";
+@import "variables";
+@import "bar";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(images/bg-mobile.png);
+  background-size: 100% 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $rW;
+}
+
+.container {
+  width: 85vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  // max-width: 400px;
+}
+
+// ----Cards----
+
+.card-1,
+.card-2 {
+  background-color: $darkBlue;
+  height: 48%;
+}
+
+// ----Card-1---
+
+.card-1 {
+  text-align: left;
+  border-radius: 10px 100px 10px 10px;
+  height: max-content;
+  padding: 12.5%;
+
+  img {
+    margin-bottom: 20px; // Flyo-Logo
+  }
+
+  //   Icons
+
+  .icons {
+    margin-top: 10px;
+
+    img {
+      height: clamp(45px, 13vw, 55px); //-----Icons-----
+      padding: 12px;
+      width: clamp(45px, 13vw, 55px);
+      margin: 0 8px;
+      background-color: $veryDarkBlue;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+  }
+}
+
+// ----card-2----
+
+.card-2 {
+  height: 44%;
+  border-radius: 10px;
+  padding: 3.7% 8.5% 4%;
+  color: $paleBlue;
+  font-size: 0.8rem;
+  min-height: 180px;
+  // max-height: 290px;
+  
+
+  span {
+    font-weight: 700;
+  }
+
+  #storage-bar {
+    position: relative;
+
+    .storage-bar {
+      margin: 50px auto 0;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+  }
+}
+
+.card-2-bottom {
+  position: relative;
+  width: 60%;
+  padding: 5%;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  height: max-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 12px;
+  transform: translateY(-60%);
+
+  p {
+    color: $darkBlue;
+    display: inline-block;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 2rem;
+    color: black;
+  }
+}
+
+@media  screen and (min-width:768px) and (max-width:1180px) {
+  .container{
+    max-width: 400px;
+  }
+  .card-2{
+    max-height: 250px;
+  }
+  
+}
+
+
+@import "desktop";
